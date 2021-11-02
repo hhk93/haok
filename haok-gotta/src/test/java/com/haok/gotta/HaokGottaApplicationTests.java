@@ -1,6 +1,7 @@
 package com.haok.gotta;
 
 import com.haok.gotta.serializable.Host;
+import com.haok.gotta.serializable.Human;
 import com.haok.gotta.serializable.Person;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,7 +26,7 @@ class HaokGottaApplicationTests {
 
     public static void writeFile() {
         try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(filePath))) {
-            objectOutputStream.writeObject(new Person().setName("123").setHost("333"));
+            objectOutputStream.writeObject(new Person("1", "nmae11"));
             System.out.println("序列化成功");
         } catch (IOException e) {
             e.printStackTrace();
